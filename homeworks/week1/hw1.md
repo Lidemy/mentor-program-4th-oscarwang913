@@ -2,7 +2,7 @@
 
 ### :green_book: 怎麼寫作業
 
-寫作業前，必須在本地端先建立一個 branch ( `git branch week1` )。之後就可以開始寫作業了。在完成後，記得要將作業加入到 Staging Area (`git add .`)，並加入自己的 commit (`git commit -m`) 
+寫作業前，必須在本地端先建立一個 branch ( `git branch week1` )。之後就可以開始寫作業了。在完成後，記得要將作業加入到 Staging Area (`git add .`)，如果有任何更動，並加入自己的 commit (`git commit -m`)。
 
 ### :green_book: 交作業
 
