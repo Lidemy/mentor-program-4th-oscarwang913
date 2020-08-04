@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Lazy-Form</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <form class="apply__form">
+      <h1 class="form__title">新拖延運動報名表單</h1>
+      <div class="event__info">
+        <p class="event__time">活動日期：2020/12/10 ~ 2020/12/11</p>
+        <p class="event__place">活動地點：台北市大安區新生南路二段1號</p>
+      </div>
+      <h3 class="notice">必填 (若資訊有誤，會顯示紅框)</h3>
+      <div class="questions">
+        <div class="question required">
+          <p class="question__title">暱稱</p>
+          <input type="text" placeholder="您的回答" class="answer">
+        </div>
+        <div class="question required">
+          <p class="question__title">電子郵件</p>
+          <input type="email" placeholder="您的電子郵件" class="answer">
+        </div>
+        <div class="question required">
+          <p class="question__title">手機號碼</p>
+          <input type="text" placeholder="您的手機號碼" class="answer" id="number">
+        </div>
+        <div class="question required">
+          <p class="question__title">報名類型</p>
+          <div class="type1 radioType">
+            <input type="radio" name="type" id="bed">
+            <label for="bed">躺在床上用想像力實作</label>
+          </div>
+          <div class="type2 radioType">
+            <input type="radio" name="type" id="phone">
+            <label for="phone">趴在地上滑手機找現成的</label>
+          </div>
+        </div>
+        <div class="question required">
+          <p class="question__title">怎麼知道這個活動的？</p>
+          <input type="text" placeholder="您的回答" class="answer">
+        </div>
+        <div class="question">
+          <p class="question__title">其他</p>
+          <p class="sub__title">對活動的一些建議</p>
+          <input type="text" placeholder="您的回答" class="answer">
+        </div>
+      </div>
+      <div class="button__section">
+        <button class="submit__btn">提交</button>
+        <p class="warning">請勿透過表單送出您的密碼。</p>
+      </div>
+    </form>
+  </div>
+  <footer class="copy__right">
+    © 2020 © Copyright. All rights Reserved.
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
