@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(90deg, #232526, #414345);
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* navbar */
+.navbar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* home page */
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 80px 30px;
+}
+
+.add__msg {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(35,37,38,.5);
+}
+
+.left__section {
+  flex: 1;
+}
+
+.input__section {
+  display: flex;
+}
+
+.input {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.name__section {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
+#nickName {
+  outline: none;
+  border: none;
+  padding: 6px;
+  font-size: 14px;
+  border-bottom: 3px solid #232526;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.add__btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: #232526;
+  font-size: 20px;
+}
+
+.board {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.card, .account__section {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(35,37,38,.5);
+}
+
+.card__up {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 12px;
+}
+
+.display__name {
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: break-all;
+  white-space: pre-line;
+}
+
+.create__time {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.card__down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  padding: 0 5px;
+  line-height: 1.5;
+  word-break: break-all;
+  white-space: pre-line;
+  margin-bottom: 10px;
+}
+
+.button__section {
+  align-self: flex-end;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #232526;
+  background-color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  transition: all .5s;
+  color: #fff;
+  background-color: #232526;
+}
+
+.account__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.statement {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.account__btn {
+  font-size: 0;
+}
+
+.account__btn a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #232526;
+}
+
+.account__btn a:first-child {
+  margin-right: 16px;
+}
+
+/* sign up page */
+
+.container_sign {
+  max-width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #fff
+}
+
+.sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.sign div {
+  background-color: #F4F8F7;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.sign div + div {
+  margin-top: 20px;
+}
+
+.sign input[type=text],
+.sign input[type=password] {
+  font-size: 14px;
+  width: 300px;
+  outline: none;
+  border: none;
+  background-color: #F4F8F7;
+  padding: 8px;
+}
+
+.sign input[type=submit] {
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: #232526;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sign .signup_in_control {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.signup_btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: #232526;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0 0 16px;
+}
+
+.errorMsg {
+  position: absolute;
+  color: #f00;
+  top: 25%;
+  left: 32%;
+  font-weight: 600;
+}
+
+.warning_msg {
+  color: #f00;
+}
+
+.nickname {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  margin-right: 16px;
+}
+
+.signout_btn {
+  color: #fff;
+  text-decoration: none;
+}
+
+.signout_btn:hover {
+  color: #f00;
+}
