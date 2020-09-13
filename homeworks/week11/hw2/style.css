@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #EEF0F1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100vw;
+  height: 60vh;
+  background: url('./banner.jpg') center bottom/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginOptions {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  z-index: 2;
+}
+
+.loginOptions a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  font-size: 25px;
+}
+
+.logo,
+.brand,
+.username {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  background-color: #000;
+  font-size: 35px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 55px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.brand {
+  color: #000;
+}
+
+.home_page,
+.about_page,
+.admin_page,
+.post_list_page,
+.login_page,
+.logout_page {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.about_page,
+.post_list_page,
+.admin_page,
+.login_page,
+.logout_page {
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.about_page:hover,
+.admin_page:hover,
+.post_list_page:hover,
+.login_page:hover,
+.create_btn:hover,
+.logout_page:hover {
+  background-color: #C69C78;
+  color: #fff;
+}
+
+.cards-cat {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 90%;
+  margin-bottom: 35px;
+  flex-wrap: wrap; 
+}
+
+.column,
+.placeholder {
+  width: 35%;
+  margin: 10px;
+}
+
+.card {
+  border: 1px solid #ccc;
+}
+
+.card,
+.card_img,
+.img {
+  width: 100%;
+}
+
+.img{
+  height: 400px;
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.card_section {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.contributor {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.contributor_img,
+.image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.image {
+  background-color: #C69C78;
+}
+
+.contributor_img {
+  margin-right: 12px;
+}
+
+.post_title {
+  font-size: 30px;
+}
+
+.contributor_name {
+  color: #aaa;
+}
+
+.post_link {
+  text-decoration: none;
+  color: #000;
+}
+
+.category {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 30px 50px;
+  margin-bottom: 15px;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer__contact .about_page,
+.home_page {
+  border: none;
+}
+
+.footer__contact .about_page:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.copy_right {
+  font-size: 12px;
+}
+
+/* all post section */
+
+.posts_section {
+  width: 100%;
+  height:calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+/* new post page */
+.new_post_section,
+.new_post_form,
+.title,
+.new_post_form .content {
+  border-radius: 10px;
+}
+
+.new_post_section {
+  background-color: #fff;
+  width: 100%;
+  max-width: 600px;
+  height: 70vh;
+  border: 1px solid #EEF0F1;
+  margin: 30px 0;
+}
+
+.new_post_form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.title,
+.new_post_form .content {
+  resize: none;
+  outline: none;
+  border: none;
+}
+
+.title {
+  height: 100px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.post_category {
+  padding: 20px;
+  color: #C69C78;
+}
+
+.new_post_form .content {
+  flex: 1;
+  padding: 20px;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #C69C78;
+  font-weight: 600;
+}
+
+.submit_btn {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  background-color: #C69C78;
+  color: #fff;
+  display: block;
+  outline: none;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.manage_section {
+  padding: 30px 0;
+  width: 100%;
+  height: calc(100vh - 230px);
+  display: flex;
+  overflow-y: scroll;
+}
+
+.side_nav {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.profile {
+  background: #C69C78;
+  width: 100%;
+}
+
+.profile__img img {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 10px 0;
+}
+
+.post_count {
+  font-size: 20px;
+}
+
+.post_count span {
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.button {
+  position: relative;
+}
+
+.create_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.new_post_btn,
+.new_category_btn {
+  position: absolute;
+  text-decoration: none;
+  color: #000;
+  transform: translateX(-50%);
+  transition: all 1s ease-in-out;
+}
+
+.new_post_btn {
+  top: -50%;
+}
+.new_category_btn {
+  top: -120%;
+}
+
+.manage_table {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.manage_table table {
+  /* remove the cell-margin */
+  border-collapse: collapse;
+  width: 48%;
+}
+
+.edit_btn,
+.delete_btn {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete_btn {
+  outline: none;
+  border: none;
+}
+
+.table_title {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.table_header {
+  background-color: #C69C78;
+}
+
+.table_header th,
+.table_content td {
+  padding: 20px 50px;
+  border: 1px #ddd solid;
+  text-align: center;
+}
+
+.blank {
+  width: 100%;
+  height: 240px;
+}
+
+.form_section {
+  position: absolute;
+  top: 40%;
+  background: #fff;
+  max-width: 700px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_form {
+  width: 100%;
+}
+
+.login_title {
+  margin-bottom: 30px;
+}
+
+.personl_info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.personl_info label {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.personl_info input[type=email],
+.personl_info input[type=password] {
+  padding: 8px;
+  outline: #C69C78;
+  border: 1px solid #ccc;
+}
+
+/* single post */
+
+.single_post {
+  margin: 0 auto;
+  width: 65%;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.banner__title,
+.content {
+  white-space: pre-line;
+  word-break: break-all;
+  padding: 0 50px;
+}
+
+.banner__title {
+  font-size: 60px;
+  color: #fff;
+}
+
+.author_section {
+  width: auto;
+  padding: 20px;
+}
+
+.author {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.post_date {
+  color: #aaa;
+}
+
+.content_section {
+  width: 85%;
+  padding: 20px;
+}
+
+.content {
+  margin-left: 10px;
+}
+
+/* About page */
+
+.about_section {
+  width: 100%;
+  height: calc(100vh - 220px);
+  position: relative;
+}
+
+.about {
+  background: url('./banner.jpg') right bottom/cover no-repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.about__title, .about__slogan {
+  font-size: 60px;
+  color: #fff;
+  z-index: 2;
+  transition: color .3s ease-in-out;
+}
+
+.about__title {
+  margin-bottom: 30px;
+}
+
+.about__slogan {
+  font-size: 30px;
+}
+
+.about__slogan::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #ffff66;
+  transition: width .5s .5s ease-in-out;
+  z-index: 3;
+}
+
+.about_section:hover .about__slogan::after {
+  width: 100%;
+}
