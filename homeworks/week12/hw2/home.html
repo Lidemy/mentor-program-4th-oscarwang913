@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+  <title>Task App</title>
+</head>
+
+<body>
+  <div class="container d-flex flex-column align-items-center p-0">
+    <div class="row header">
+      <div class="col-2">
+        <p class="header__para--name mb-0 pt-2 pb-2">TASK</p>
+      </div>
+      <div class="col-10 text-right">
+        <p class="header__para--count mb-0 pt-2 pb-2"><span class="header__para--count--number mr-1">0</span>incompleted
+          tasks
+        </p>
+      </div>
+    </div>
+    <div class="row mt-3 mb-3 d-flex align-items-center w-100 store_section">
+      <div class="col-12 d-flex justify-content-center">
+        <button class="store_section__btn btn p-2 w-100">Store</button>
+      </div>
+    </div>
+    <div class="row p-3 tab_section w-100">
+      <div class="col-6 tab_section__tab">
+        <p class="tab_section__tab--name tab_section__tab--active text-center tasks mb-0 p-2">Tasks</p>
+      </div>
+      <div class="col-6 tab_section__tab">
+        <p class="tab_section__tab--name text-center mb-0 p-2">Performance</p>
+      </div>
+    </div>
+    <div class="todo__performance position-absolute hide"><span class="todo__performance_rate">0</span>%</div>
+    <div class="row p-3 todos_section w-100">
+      <div class="col-12 todos_section__todos--active p-0"></div>
+      <div class="col-12 p-0 mt-3 mb-3 todos_section__complete__section">
+        <button class="btn todos_section__complete_section--complete_btn" type="button" data-toggle="collapse"
+          data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Complete
+        </button>
+        <button class="btn todos_section__complete_section--clear_btn">Clear completed</button>
+      </div>
+      <div class="collapse w-100" id="collapseExample">
+        <div class="col-12 todos_section__todos--complete p-0"></div>
+      </div>
+    </div>
+    <div class="row pr-3 pl-3 position-fixed fixed-bottom addtodo_section">
+      <div class="col-12 p-1">
+        <div class="addtodo_section__form d-flex p-2 align-items-center">
+          <input type="text" class="form-control addtodo_section__input" aria-describedby="textHelp">
+          <button type="submit" class="addtodo_section__btn btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Edit todo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <input type="text" value="" class="edit_todo_content w-100">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn_save">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
