@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Oswald", sans-serif;
+}
+
+.navbar {
+  min-height: 80px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 40px;
+}
+
+.navbar-collapse .navbar-nav, .navbar-collapse .form-inline {
+  padding: 0 15px;
+}
+
+.navbar-light {
+  background-color: #fefefe;
+}
+.navbar-light .nav-item {
+  margin-right: 20px;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 16px;
+  line-height: 21px;
+  transition: color 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ED2B00;
+}
+
+.carousel-inner {
+  margin-top: 80px;
+  height: auto;
+}
+
+.stream-container {
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+.stream-container .stream-img-top {
+  transition: transform 0.3s ease;
+}
+.stream-container:hover .stream-body__streamer--name {
+  color: #ED2B00;
+}
+.stream-container:hover .stream-img-top {
+  transform: scale(1.05);
+}
+.stream-container .stream-body__streamer--name {
+  font-size: 24px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+.stream-container .stream-body__viewer_count {
+  color: #cccccc;
+}
+.stream-container .stream-body__more_btn {
+  color: #ffffff;
+  background: #ED2B00;
+}
+
+.activeColor {
+  color: #ED2B00 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.observer {
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
